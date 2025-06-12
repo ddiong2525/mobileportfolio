@@ -1,0 +1,140 @@
+@charset "utf-8";
+
+#con1 {
+    width: 100%;
+    height: auto;
+    max-height: 956px;
+    background: url(../img/team_bg1.png) center center no-repeat;
+    background-size: cover;
+    padding: clamp(70px, 7vw, 60px) clamp(6px, 3vw, 10px) 0 clamp(6px, 3vw, 10px);
+    /* 다시 살펴..~ */
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 4vw, 28px);
+}
+
+.con1_title {
+    font-family: var(--KBO);
+    font-size: clamp(30px, 6vw, 45px);
+    font-weight: 700;
+    padding: 16px 0;
+    text-align: center;
+    border-top: 3px solid var(--border);
+    border-bottom: 2px solid var(--border);
+}
+
+.con1_btn {
+    display: flex;
+    justify-content: center;
+    gap: clamp(8px, 4vw, 16px);
+    padding: clamp(8px, 4vw, 16px);
+    transition: all 0.2s ease;
+}
+
+.con1_btn>div {
+    padding: clamp(6px, 3vw, 12px) clamp(8px, 4vw, 16px);
+    width: auto;
+    height: auto;
+    border-radius: 150px;
+    background: var(--w-color);
+    cursor: pointer;
+    box-shadow: 0px 3px 2px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s ease;
+}
+
+.con1_btn>div:hover {
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.con1_btn>div:active {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+.con1_btn>div img {
+    height: clamp(22px, 5vw, 29px);
+}
+
+.swiper_wrapper {
+    flex: 1;
+    /* overflow: hidden; */
+}
+
+.swiper {
+    height: 100%;
+}
+
+.swiper-slide {
+    background: url(../img/team_bg2.png) center center no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.team_title {
+    font-family: var(--HOS);
+    font-size: clamp(30px, 7vw, 50px);
+    text-align: center;
+    color: var(--border);
+    padding: clamp(8px, 3vw, 16px) 0;
+    border-top: 3px solid var(--border);
+    border-bottom: 2px solid var(--border);
+}
+
+.team_title.good {
+    font-size: clamp(23px, 7vw, 37px);
+    padding: clamp(2px, 2vw, 5px) 0;
+}
+
+.team_period {
+    font-family: var(--SB_M);
+    font-weight: 400;
+    font-size: clamp(14px, 3vw, 18px);
+    color: var(--border);
+    text-align: center;
+    padding: clamp(6px, 2vw, 10px) 0;
+    border-bottom: 3px solid var(--border);
+}
+
+.team_main {
+    width: 100%;
+    max-height: 533px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: clamp(4px, 2vw, 8px);
+    padding: clamp(8px, 3vw, 16px) 0;
+}
+
+.team_main video {
+    display: block;
+    height: 100%;
+    max-height: 433px;
+}
+
+.team_btn {
+    font-size: clamp(14px, 3vw, 18px);
+    font-family: var(--HOS);
+    color: var(--w-color);
+    background: var(--border);
+    transition: all 0.2s ease;
+}
+
+.team_btn:hover {
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.2);
+    transform: translateY(1px);
+}
+
+.team_btn:active {
+    box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3);
+    transform: translateY(2px);
+}
+
+.team_btn a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    padding: clamp(8px, 3vw, 18px);
+}

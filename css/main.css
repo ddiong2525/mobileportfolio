@@ -1,0 +1,95 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Holtwood+One+SC&family=Nanum+Myeongjo&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'KBO-Dia-Gothic';
+    src: url('../font/KBO-Dia-Gothic_light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KBO-Dia-Gothic';
+    src: url('../font/KBO-Dia-Gothic_medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'KBO-Dia-Gothic';
+    src: url('../font/KBO-Dia-Gothic_bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SB_L';
+    src: url('../font/SB_어그로_L.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SB_M';
+    src: url('../font/SB_어그로_M.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SB_B';
+    src: url('../font/SB_어그로_B.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    /* cursor: none !important; */
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #000;
+}
+
+:root {
+    --main-font-color: #000000;
+    --main-blue-color: #0130D8;
+    --sub-font-color: #1C1C1C;
+    --border:#2d2d2d;
+    --gray-color: #8B8B8B;
+    --w-color: #fff;
+    --KBO: "KBO-Dia-Gothic", serif;
+    --SB_L: "SB_L", serif;
+    --SB_M: "SB_M", serif;
+    --SB_B: "SB_B", serif;
+    --NM: "Nanum Myeongjo", serif;
+    --NSK: "Noto Sans KR", sans-serif;
+    --HOS: "Holtwood One SC", serif;
+}
+
+.inner {
+    width: clamp(320px, 100vw, 440px);
+    margin: 0 auto;
+    /* background: #000; */
+    position: relative;
+}
+
+nav {
+    height: clamp(70px, 12vw, 91px);
+    width: clamp(320px, 100vw, 440px);
+    background: rgba(255, 255, 255, 0.86);
+    display: flex;
+    align-items: center;
+    padding-left: 25px;
+    position: fixed;
+    margin: 0 auto;
+    top: 0;
+    z-index: 999;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+nav img {
+    height: clamp(35px, 5vw, 39px);
+}
