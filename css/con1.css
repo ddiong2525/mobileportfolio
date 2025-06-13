@@ -3,10 +3,10 @@
 #con1 {
     width: 100%;
     height: auto;
-    max-height: 956px;
+    /* max-height: 956px; */
     background: url(../img/team_bg1.png) center center no-repeat;
     background-size: cover;
-    padding: clamp(80px, 7vw, 90px)  clamp(6px, 3vw, 10px);
+    padding: clamp(80px, 7vw, 90px) clamp(6px, 3vw, 10px);
     /* 다시 살펴..~ */
     display: flex;
     flex-direction: column;

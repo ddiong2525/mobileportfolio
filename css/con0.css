@@ -72,7 +72,7 @@
     will-change: transform;
 }
 
-.marquee3k div span {
+#con0 .marquee3k div span {
     display: inline-block;
     margin-right: 0.5vw;
     color: var(--w-color);
