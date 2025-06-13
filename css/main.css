@@ -76,10 +76,10 @@ body {
     position: relative;
 }
 
-nav {
+/* nav {
     height: clamp(70px, 12vw, 91px);
     width: clamp(320px, 100vw, 440px);
-    background: rgba(255, 255, 255, 0.86);
+    background: rgba(255, 255, 255, 1);
     display: flex;
     align-items: center;
     padding-left: 25px;
@@ -92,4 +92,4 @@ nav {
 
 nav img {
     height: clamp(35px, 5vw, 39px);
-}
+} */

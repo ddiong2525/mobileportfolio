@@ -9,7 +9,8 @@
     overflow: hidden;
     background: var(--w-color);
     width: 100%;
-    height: clamp(500px, 100vh, 956px);
+    /* height: clamp(500px, 100vh, 956px); */
+    height: 100vh;
     flex-wrap: wrap;
 }
 
@@ -18,7 +19,7 @@
     z-index: 1;
     margin: 0 auto;
     width: 90%;
-    height: 90%;
+    height: 92%;
     /* width: clamp(262px, 82vw, 360px); */
     /* height: clamp(409px, 146vw, 782px); */
 }
