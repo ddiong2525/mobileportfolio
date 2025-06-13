@@ -6,7 +6,7 @@
     max-height: 956px;
     background: url(../img/team_bg1.png) center center no-repeat;
     background-size: cover;
-    padding: clamp(70px, 7vw, 60px) clamp(6px, 3vw, 10px) 0 clamp(6px, 3vw, 10px);
+    padding: clamp(70px, 7vw, 60px)  clamp(6px, 3vw, 10px);
     /* 다시 살펴..~ */
     display: flex;
     flex-direction: column;
@@ -21,6 +21,7 @@
     text-align: center;
     border-top: 3px solid var(--border);
     border-bottom: 2px solid var(--border);
+    color: var(--border);
 }
 
 .con1_btn {

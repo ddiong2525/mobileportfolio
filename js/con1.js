@@ -8,5 +8,11 @@ $(function () {
         keyboard: true,
         slidesPerView: 1.2,
         spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        speed: 500,
+        loop:true,
     });
 });
