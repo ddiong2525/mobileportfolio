@@ -10,7 +10,7 @@
     background: var(--w-color);
     width: 100%;
     /* height: clamp(500px, 100vh, 956px); */
-    height: 100vh;
+    height: 100dvh;
     flex-wrap: wrap;
 }
 
