@@ -17,6 +17,7 @@
     align-items: center;
     gap: 25px;
     padding: 50px 0;
+    /* 임시 */
 }
 
 .con2_box {
@@ -25,10 +26,43 @@
     border: 1px solid var(--main-font-color);
 }
 
+.con2_txtanibox {
+    width: 100%;
+    height: auto;
+    padding: 10px 0px 2px 0px;
+    border-bottom: 1px solid var(--main-font-color);
+}
+
 #con2 .marquee3k div span {
     color: var(--main-font-color);
-    font-size: clamp(20px, 5vw, 30px);
+    font-size: clamp(45px, 8vw, 60px);
     font-family: var(--SB_B);
     display: inline-block;
-    margin-right: 0.5vw;
+    margin-right: 0.3vw;
+}
+
+.con2_title {
+    padding: 12px clamp(24px, 5vw, 65px) 8px clamp(24px, 5vw, 65px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--main-font-color);
+    font-family: var(--SB_B);
+    font-size: clamp(14px, 3vw, 18px);
+    white-space: nowrap;
+}
+
+.con2_vidbox {
+    width: 100%;
+    height: 200px;
+    padding: 10px 17px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_vidbox video {
+    height: 95%;
+    width: 98%;
 }
