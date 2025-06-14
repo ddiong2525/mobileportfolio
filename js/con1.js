@@ -9,7 +9,7 @@ $(function () {
         slidesPerView: 1.2,
         spaceBetween: 30,
         autoplay: {
-            delay: 2500,
+            delay: 3500,
             disableOnInteraction: false,
         },
         speed: 500,
