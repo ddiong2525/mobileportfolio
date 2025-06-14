@@ -66,3 +66,28 @@
     height: 95%;
     width: 98%;
 }
+
+.con2_tool {
+    padding: clamp(8px, 2vh, 12px) clamp(10px, 4vw, 15px);
+    display: flex;
+    gap: clamp(4px, 1vw, 8px);
+    justify-content: flex-start;
+    align-items: center;
+    border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_tool img {
+    width: clamp(32px, 5vw, 40px);
+}
+
+.con2_tool .percent {
+    font-family: var(--SB_M);
+    color: var(--w-color);
+    background: var(--main-font-color);
+    height: clamp(32px, 5vw, 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 4px 2px 4px;
+    border-radius: 0px 16px;
+}
