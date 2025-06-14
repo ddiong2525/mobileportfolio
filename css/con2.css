@@ -15,8 +15,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 25px;
-    padding: 50px 0;
+    gap: 80px;
+    padding: 80px 0;
     /* 임시 */
 }
 
@@ -27,11 +27,22 @@
     border: 1px solid var(--main-font-color);
 }
 
+.con2_box.d {
+    background: url(../img/bgbg_d.jpg) center center no-repeat;
+    background-size: cover;
+    color: var(--w-color);
+    border: 1px solid var(--w-color);
+}
+
 .con2_txtanibox {
     width: 100%;
     height: auto;
     padding: 10px 0px 2px 0px;
     border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_txtanibox.d {
+    border-bottom: 1px solid var(--w-color);
 }
 
 #con2 .marquee3k div span {
@@ -40,6 +51,10 @@
     font-family: var(--SB_B);
     display: inline-block;
     margin-right: 0.3vw;
+}
+
+#con2 .con2_box.d .marquee3k div span {
+    color: var(--w-color);
 }
 
 .con2_title {
@@ -53,6 +68,10 @@
     white-space: nowrap;
 }
 
+.con2_title.d {
+    border-bottom: 1px solid var(--w-color);
+}
+
 .con2_vidbox {
     width: 100%;
     height: 200px;
@@ -61,6 +80,10 @@
     justify-content: center;
     align-items: center;
     border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_vidbox.d {
+    border-bottom: 1px solid var(--w-color);
 }
 
 .con2_vidbox video {
@@ -75,6 +98,10 @@
     justify-content: flex-start;
     align-items: center;
     border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_tool.d {
+    border-bottom: 1px solid var(--w-color);
 }
 
 .con2_tool img {
@@ -94,11 +121,21 @@
     font-size: clamp(13px, 2vw, 16px);
 }
 
+.con2_tool .percent.d {
+    background: var(--w-color);
+    color: var(--main-font-color);
+}
+
 .con2_info {
-    padding: 15px;
+    padding: clamp(13px, 3vw, 15px);
     display: flex;
     flex-direction: column;
     gap: 10px;
+    border-bottom: 1px solid var(--main-font-color);
+}
+
+.con2_info.d {
+    border-bottom: 1px solid var(--w-color);
 }
 
 .info_title {
@@ -106,7 +143,7 @@
     flex-direction: column;
 }
 
-.info_title i{
+.info_title i {
     font-family: var(--SB_M);
     font-size: clamp(21px, 4vw, 23px);
 }
@@ -126,4 +163,19 @@
     gap: 5px;
     word-break: keep-all;
     line-height: 132.9%;
+}
+
+.con2_viewbtn {
+    display: flex;
+    justify-content: center;
+    padding: clamp(13px, 3vw, 15px);
+}
+
+.con2_viewbtn .team_btn {
+    background: var(--main-font-color);
+}
+
+.con2_viewbtn .team_btn.d {
+    background: var(--w-color);
+    color: var(--main-font-color);
 }
