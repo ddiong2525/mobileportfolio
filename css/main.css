@@ -49,6 +49,11 @@
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    scroll-behavior: smooth;
+}
+
 body {
     background: #000;
 }
@@ -57,7 +62,7 @@ body {
     --main-font-color: #000000;
     --main-blue-color: #0130D8;
     --sub-font-color: #1C1C1C;
-    --border:#2d2d2d;
+    --border: #2d2d2d;
     --gray-color: #8B8B8B;
     --w-color: #fff;
     --KBO: "KBO-Dia-Gothic", serif;
@@ -74,9 +79,10 @@ body {
     margin: 0 auto;
     /* background: #000; */
     position: relative;
+    scroll-behavior: smooth;
 }
 
-/* nav {
+nav {
     height: clamp(70px, 12vw, 91px);
     width: clamp(320px, 100vw, 440px);
     background: rgba(255, 255, 255, 1);
@@ -92,4 +98,4 @@ body {
 
 nav img {
     height: clamp(35px, 5vw, 39px);
-} */
+}
