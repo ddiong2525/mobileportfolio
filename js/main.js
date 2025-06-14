@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     gsap.registerPlugin(ScrollTrigger);
     ScrollTrigger.normalizeScroll(true);
 
-    let lastScroll = 0;
+/*     let lastScroll = 0;
     const nav = document.querySelector('nav');
 
     window.addEventListener('scroll', function () {
@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.style.transform = 'translateY(0)';
         }
         lastScroll = curr;
-    });
+    }); */
 
 /*     const lenis = new Lenis({
         duration: 1.2, // 부드러움 정도 (1~2 추천)
