@@ -94,10 +94,65 @@ nav {
     position: absolute;
     left: 0;
     top: 0;
-    z-index: 999;
+    z-index: 100;
     transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 nav img {
     height: clamp(35px, 5vw, 39px);
+}
+
+/* loading */
+.loading {
+    width: clamp(320px, 100vw, 440px);
+    height: 100vh;
+    background: var(--main-font-color);
+    overflow: hidden;
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    z-index: 999;
+    transition: top 1s ease-in-out;
+}
+
+.loading.hidden {
+    top: -100%;
+}
+
+.loading_text {
+    position: absolute;
+    top: -10px;
+    left: 0px;
+    animation: dropText .5s ease-out forwards;
+    transform: rotate(90deg);
+}
+
+@keyframes dropText {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.loading_text .nemo {
+    position: absolute;
+    bottom: 11px;
+    left: 37px;
+    animation: nemo 1.5s ease-out forwards;
+}
+
+@keyframes nemo {
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(23px);
+    }
 }
