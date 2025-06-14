@@ -1,7 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    gsap.registerPlugin(ScrollTrigger);
-    ScrollTrigger.normalizeScroll(true);
-
     /*     let lastScroll = 0;
         const nav = document.querySelector('nav');
     
