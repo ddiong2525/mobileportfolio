@@ -4,8 +4,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-    border-left: 1px solid var(--w-color);
-    border-right: 1px solid var(--w-color);
+    border: 1px solid var(--w-color);
 }
 
 .con2_deco {
