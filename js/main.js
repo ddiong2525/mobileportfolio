@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         document.querySelector('#con0 video').play();
-    }, 7000);
+    }, 6500);
 });
