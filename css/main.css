@@ -117,7 +117,7 @@ nav img {
 }
 
 .loading.hidden {
-    top: -100%;
+    top: -200%;
 }
 
 .loading_text {
