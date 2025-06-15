@@ -1,0 +1,652 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Adamina&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+@font-face {
+    font-family: 'Noonnu';
+    src: url('../font/NoonnuBasicGothicRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT';
+    src: url('../font/경기천년제목V_Bold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT';
+    src: url('../font/경기천년제목_Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT';
+    src: url('../font/경기천년제목_Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GT';
+    src: url('../font/경기천년제목_Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scoredream';
+    src: url('../font/SCDream6.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scoredream';
+    src: url('../font/SCDream5.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scoredream';
+    src: url('../font/SCDream3.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scoredream';
+    src: url('../font/SCDream2.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Scoredream';
+    src: url('../font/SCDream1.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Namsan';
+    src: url('../font/SeoulNamsanEB.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Namsan';
+    src: url('../font/SeoulNamsanM.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Namsanm';
+    src: url('../font/서울남산장체M.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Black.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-ExtraBold.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Pretendard';
+    src: url('../font/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    --Noonnu: 'Noonnu';
+    --Adamina: "Adamina", serif;
+    --Notosans: "Noto Sans KR", sans-serif;
+    --GT: 'GT';
+    --Scdream: 'Scoredream';
+    --Namsan: 'Namsan';
+    --Pretendard: 'Pretendard';
+    --main-yellow-color: #FFDB00;
+    --main-font-color: #333333;
+    --main-gray-color: #666666;
+    --main-gray-color-l: #9D9D9D;
+    --w-color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--main-font-color);
+    overflow-x: hidden;
+}
+
+.logo img {
+    height: clamp(30px, 5vw, 50px);
+}
+
+.inner {
+    width: clamp(335px, 80vw, 1515px);
+    margin: 0 auto;
+}
+
+/* header */
+header {
+    width: 100%;
+    height: clamp(88px, 6.5vw, 104px);
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    position: relative;
+}
+
+header .main_nav ul {
+    display: flex;
+    font-family: var(--Namsan);
+    font-size: clamp(16px, 2vw, 30px);
+    gap: clamp(12px, 1.2vw, 30px);
+}
+
+header .main_nav ul li {
+    position: relative;
+}
+
+header .main_nav ul li a {
+    padding: 20px;
+}
+
+header .main_nav ul li::after {
+    content: '';
+    background: var(--main-yellow-color);
+    width: 100%;
+    height: 2px;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -9px;
+    transition: .4s;
+    transform: scale(0);
+}
+
+header .main_nav ul li:hover:after {
+    transform: scale(1);
+    /* border가 가운데서부터 커지는 상황 만들기 */
+}
+
+header .right {
+    display: flex;
+    width: 270px;
+    height: 46px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .search {
+    width: 210px;
+    height: 46px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header .search input {
+    width: 170px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: clamp(16px, 1vw, 18px);
+    color: var(--main-gray-color);
+    font-family: var(--Namsan);
+    font-weight: 300;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 0;
+    border-bottom: 1px solid var(--main-yellow-color);
+    outline: 0;
+}
+
+/* 햄버거 */
+.ham {
+    width: clamp(30px, 4vw, 40px);
+    height: clamp(30px, 4vw, 40px);
+    cursor: pointer;
+    position: relative;
+    transition: .5s;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    perspective: 600px;
+}
+
+.ham span {
+    font-size: clamp(30px, 4vw, 40px);
+    color: var(--main-font-color);
+    position: absolute;
+    opacity: 1;
+    backface-visibility: hidden;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+/* 기본 상태 */
+.ham .menu {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+.ham .close {
+    transform: rotateY(180deg);
+    opacity: 0;
+    font-size: clamp(35px, 4vw, 45px);
+}
+
+/* 클릭된 상태: 반대로 회전 */
+.ham.active .menu {
+    transform: rotateY(180deg);
+    opacity: 0;
+}
+
+.ham.active .close {
+    transform: rotateY(0deg);
+    opacity: 1;
+}
+
+/* 슬라이드 메뉴 */
+.sidemenu {
+    position: absolute;
+    top: clamp(88px, 6.5vw, 104px);
+    right: 0;
+    width: clamp(180px, 30vw, 220px);
+    height: auto;
+    background: var(--w-color);
+    box-shadow: -4px 0 7px rgba(0, 0, 0, 0.1);
+    transform: translateX(100%);
+    transition: transform 0.4s ease;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--Namsan);
+}
+
+.sidemenu ul {
+    text-align: center;
+    width: 100%;
+    height: auto;
+}
+
+.sidemenu li {
+    white-space: nowrap;
+    width: 100%;
+    height: 100%;
+}
+
+.sidemenu a {
+    text-decoration: none;
+    font-size: clamp(18px, 3vw, 25px);
+    color: var(--main-font-color);
+    transition: color 0.2s ease;
+    width: 100%;
+    height: 100%;
+    display: flex;
+        padding: clamp(15px, 2.5vw, 18px) 0;
+        justify-content: center;
+        align-items: center;
+}
+
+.sidemenu a:hover {
+    color: var(--point-color);
+}
+
+/* 메뉴 열림 상태 */
+.sidemenu.active {
+    transform: translateX(0%);
+}
+
+/* font */
+h2 {
+    font-family: var(--Scdream);
+    font-size: clamp(23px, 4.5vw, 60px);
+    font-weight: 600;
+}
+
+/* .more a {
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    font-size: 24px;
+    background: none;
+    display: flex;
+    gap: 10px;
+    transition: .3s;
+}
+
+.more a:hover {
+    background: linear-gradient(90deg, #FFDB00 0%, #434343 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+} */
+
+/* 공통요소 */
+.tit.main {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: space-between;
+    align-items: center;
+    border-left: clamp(4px, 0.73vw, 10px) solid var(--main-yellow-color);
+    position: relative;
+    margin-bottom: clamp(17px, 1.9vw, 20px);
+}
+
+.inner .tit.main>.more {
+    align-self: flex-end;
+}
+
+.tit.main h2 {
+    padding-left: clamp(14px, 1.8vw, 20px);
+}
+
+.more a {
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    font-size: clamp(16px, 2.4vw, 24px);
+    display: flex;
+    align-items: center;
+    gap: clamp(6px, 1vw, 10px);
+    background: linear-gradient(90deg, #FFDB00 0%, #434343 100%);
+    background-size: 200% auto;
+    /* 배경 크기를 2배로 */
+    background-position: 50% 0%;
+    /* 시작은 왼쪽 */
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 1s cubic-bezier(0.4, 0, 0.2, 1);
+    /* 부드럽게 이동 */
+}
+
+.more a p {
+    white-space: nowrap;
+}
+
+.more a span {
+    font-size: clamp(16px, 2.4vw, 24px);
+}
+
+.more a:hover {
+    background-position: 100% 50%;
+    /* 오른쪽으로 이동 */
+}
+
+
+/* footer */
+footer {
+    width: 100%;
+    height: clamp(197px, 19.6vw, 282px);
+    background-color: #111111;
+    display: flex;
+}
+
+footer .left {
+    flex: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+footer .left .top {
+    height: 64px;
+    display: flex;
+    align-items: center;
+    gap: 43px;
+    margin-top: clamp(20px, 2.5vw, 38px);
+    padding: 0 clamp(20px, 6.25vw, 100px);
+}
+
+footer .left .top>a {
+    font-family: var(--Notosans);
+    font-weight: 400;
+    font-size: clamp(20px, 1.8vw, 26px);
+    color: #C1A600;
+    transition: 0.3s;
+}
+
+footer .left .top>a:hover {
+    color: var(--main-yellow-color);
+}
+
+footer .left .sns {
+    display: flex;
+    font-size: clamp(32px, 3.5vw, 46px);
+    gap: clamp(13px, 1vw, 20px);
+}
+
+footer .left .sns li {
+    color: var(--main-gray-color-l);
+    transition: .3s;
+}
+
+footer .left .sns li:hover {
+    color: #cccccc;
+}
+
+footer .left .middle {
+    margin-top: 31px;
+    padding: 0 clamp(20px, 6.25vw, 100px);
+    margin-bottom: 25px;
+}
+
+footer .left .middle .sel_opt {
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: relative;
+
+}
+
+footer .left .middle .sel_opt select {
+    width: 100%;
+    height: clamp(32px, 2.2vw, 42px);
+    border: 0;
+    background: #4a4a4a;
+    outline: 0;
+    color: var(--w-color);
+    border-radius: 20px;
+    padding-right: 10px;
+    font-family: var(--Noonnu);
+    font-size: clamp(18px, 1.1vw, 20px);
+    text-align: center;
+    cursor: pointer;
+    padding-top: 4px;
+    appearance: none;
+}
+
+
+.sel_opt span {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    /* 클릭 방해 안 되도록 */
+    font-size: clamp(20px, 1.1vw, 22px);
+    color: var(--w-color);
+}
+
+footer .left .middle ul {
+    display: flex;
+    color: var(--main-gray-color-l);
+    font-family: var(--Noonnu);
+    gap: clamp(32px, 3.8vw, 65px);
+    line-height: 136.6%;
+    word-break: keep-all;
+}
+
+footer .left .middle ul li p {
+    font-size: clamp(16px, 1.1vw, 18px);
+}
+
+footer .left .middle ul li span {
+    font-size: clamp(14px, 1vw, 16px);
+}
+
+footer .left .bottom {
+    height: auto;
+    border-top: 1px solid #676767;
+    display: flex;
+    padding-left: clamp(20px, 6.25vw, 100px);
+}
+
+footer .left .bottom .copy {
+    flex: 2;
+    font-size: 14px;
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    color: #7e7e7e;
+    margin: 21px;
+    /* margin-left: 100px; */
+}
+
+footer .left .bottom .info {
+    display: flex;
+    gap: clamp(24px, 3vw, 50px);
+    margin: clamp(16px, 1.8vw, 29px);
+    color: #cccccc;
+    flex: 1;
+}
+
+footer .right {
+    flex: 1;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    /* 백그라운드 블러 안 삐져나오게 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .right .contents {
+    position: relative;
+    z-index: 100;
+    color: var(--w-color);
+    font-family: var(--Notosans);
+
+}
+
+footer .right .contents .right_left .tit {
+    display: inline-flex;
+    padding-bottom: 8px;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid #FFDB00;
+}
+
+footer .right .contents .right_left .tit p {
+    font-weight: 400;
+    font-size: 32px;
+}
+
+footer .right .contents .right_left>p {
+    font-weight: 300;
+    padding: 10px 0;
+    line-height: normal;
+    font-size: 17px;
+}
+
+footer .right .contents .email {
+    display: inline-flex;
+    padding: 5px 15px;
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 100px; */
+    width: clamp(280px, 32vw, 462px);
+    height: 46px;
+    border-radius: 0px 30px 30px 0px;
+    border-left: 2px solid #FFDB00;
+    background: rgba(255, 255, 255, 0.77);
+}
+
+footer .right .contents .email input {
+    width: clamp(180px, 24vw, 320px);
+    outline: 0;
+    border: 0;
+    background: none;
+    font-size: 17px;
+    color: #8F8F8F;
+}
+
+footer .right .contents .email .btn {
+    width: clamp(70px, 9vw, 91px);
+    height: clamp(32px, 3.2vw, 35px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--main-yellow-color);
+    cursor: pointer;
+    font-size: clamp(16px, 1.1vw, 18px);
+    color: var(--main-font-color);
+    font-weight: 400;
+    border-radius: 30px;
+}
+
+footer .right .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.54) 61.5%),
+        url(../img/news.jpg) center center / cover no-repeat;
+    filter: blur(2.9000000953674316px);
+}

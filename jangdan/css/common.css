@@ -1,0 +1,411 @@
+@charset "utf-8";
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Serif:ital,opsz,wght@0,8..144,100..900;1,8..144,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap&family=Playfair+Display:ital,wght@0,400..900;1,400..900');
+
+/* 
+font-family: "Roboto", serif;
+font-family: "Open Sans", serif;
+font-family: "Roboto Serif", serif;
+*/
+
+@font-face {
+    font-family: 'ChosunCentennial';
+    src: url('../font/ChosunCentennial_ttf.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'DeogonPrincess';
+    src: url('../font/DeogonPrincess.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'dimibang';
+    src: url('../font/dimibang.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'SuseongBatang';
+    src: url('../font/SuseongBatang.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EBSL';
+    src: url('../font/EBSL.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EBSM';
+    src: url('../font/EBSM.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EBSB';
+    src: url('../font/EBSB.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+:root{
+    --main-red: #9B1B30;
+    --main-green: #225131;
+    --main-blue: #003841;
+    --w-color: #fff;
+    --Roboto-serif:"Roboto Serif", serif;
+    --Playfair : "Playfair Display", serif;
+    --dimibang : "dimibang", serif;
+    --DeogonPrincess : "DeogonPrincess", serif;
+    --ChosunCentennial : "ChosunCentennial", serif;
+    --EBSB : "EBSB", serif;
+    --EBSL : "EBSL", serif;
+    --EBSM : "EBSM", serif;
+}
+/* 컴포넌트같은 개념. 여기서 색 바꾸면 아래에서 불러온 색상이 다 바뀐다 */
+
+::selection {
+    background-color: var(--main-blue);
+    color: var(--w-color);
+}
+
+* {box-sizing:border-box}
+body {
+    font-family: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+}
+
+.inner{
+    margin-inline: auto;/* inline */
+    width: 95%;
+    max-width: 1700px;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 10;
+}
+
+header .fix {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    right: -100%;/* on전에는 오른쪽으로 숨겨놨다가 on상황에는 자연스럽게 오도록 설정 */
+    top: 0;
+    display: flex;
+    transition: .6s;
+    background: var(--main-red);
+}
+
+header.on .fix {
+    right: 0;
+}
+
+header .fix .img_box {
+    flex: 1;
+    background: url(../asset/img/fix_imgbox_bg2.jpg) center/cover;
+    font-size: 2.3rem;
+    color: #e7e7e7;
+    font-family: var(--DeogonPrincess);
+    text-shadow: 3px 3px 10px rgba(61, 61, 61, 0.69);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+header .fix .img_box p {
+    color: var(--w-color);
+    text-shadow: 3px 3px 10px rgba(61, 61, 61, 0.69);
+    font-family: var(--Playfair);
+    font-size: 3.7rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.fix .gnb {
+    flex: 1;
+    background: var(--main-rpink);
+    color: var(--w-color);
+    display: flex;/* gnb의 자식이 ul 하나뿐이니까 가운데정렬하려고 플렉스 적용 */
+    justify-content: center;
+    align-items: center;
+}
+
+.fix .gnb>ul {
+    width: 80%;
+    height: 80%;
+    flex-direction: column;
+}
+
+.fix .gnb>ul>li {
+    flex: 1;
+    align-content: center;/* flex를 설정하지 않아도 위아래 정렬이 display 블럭일 때 먹는다 */
+    transform: translateY(100px);/* 밑에서 위로 올라오는 효과를 주기 위해 일단 밑으로 내림 */
+    transition: 1s;
+    /* transition-delay: 0.2s; */
+}
+
+header.on .fix .gnb>ul>li {
+    transform: translateY(0);
+}
+
+.fix .gnb>ul>li>a {
+    font-size: 5.2rem;
+    font-family: var(--DeogonPrincess);
+}
+
+.fix .gnb>ul>li>ul.sub {
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-block-start: 20px;
+}
+
+.fix .gnb>ul>li>ul.sub li {
+    border-left: 1px solid var(--w-color);
+    padding-inline: 1rem;/* margin block과 비슷한 속성. 가로가 인라인 세로가 블록이라 생각하면 됨 */
+}
+
+.fix .gnb>ul>li>ul.sub li:first-child {
+    border-left: none;
+    padding-inline-start: 0;
+}
+
+header .inner {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--w-color);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    text-transform: capitalize;
+}
+
+header.on h1 {
+    display: none;
+}
+
+header.on nav, header.sc nav {
+    display: none;
+}
+
+header.on .lang, header.sc .lang {
+    display: none;
+}
+
+header ul {
+    display: flex;
+}
+
+nav {
+    width: 850px;
+    font-size: 1.5rem;
+    font-family: var(--DeogonPrincess);
+}
+
+nav ul li {
+    flex: 1;
+    text-align: center;
+}
+
+nav ul li a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+nav ul li a::before{
+    background: var(--main-red);
+    opacity: 0.8;
+    content: '';
+    display: block;
+    width: 0; height: 100%;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: .3s;
+}
+nav ul li:hover a::before{
+    width: 60%;
+}
+
+.lang ul {
+    gap: 15px;
+    font-family: var(--DeogonPrincess);
+    font-weight: 200;/* 400이 기본. 얇게 설정한거임 */
+    font-size: 1.2rem;
+}
+
+.lang ul li {
+    border-right: 1px solid #fff;
+    padding-right: 15px;
+}
+
+.lang ul li:last-child {
+    border-right: none;
+}
+
+.lang ul li a {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.lang ul li a::before{
+    background: var(--main-red);
+    opacity: 0.8;
+    content: '';
+    display: block;
+    width: 0; height: 100%;
+    position: absolute;
+    left: 50%; top: 0;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: .2s;
+}
+.lang ul li:hover a::before{
+    width: 100%;
+}
+
+/* .lang ul li a {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    background: linear-gradient(to right, #9B1B30 50%, white 50%);
+    background-size: 200% 100%;
+    background-position: right bottom;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: background-position 0.2s ease;
+}
+
+.lang ul li:hover a {
+    background-position: left bottom;
+} */
+
+.ham {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    transition: .6s;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+header.on .ham {
+    border: 1px solid #fff;
+    margin-left: auto;
+}
+
+.ham ul {
+    flex-direction: column;
+    width: 26px;
+    height: 20px;
+    justify-content: space-between;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-39%,-39%);
+}
+
+.ham ul li{
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transform-origin: left top;
+    transition: .6s;
+}
+
+header.on .ham ul li{
+    transform: rotate(45deg);
+}
+
+.ham ul li:nth-child(2) {
+    width: 70%;
+}
+
+header.on .ham ul li:nth-child(2) {
+    display: none;
+}
+
+header.on .ham ul li:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+footer {
+    height: 210px;
+    background: #240015;
+    color: #d2d2d2;
+}
+
+footer .inner {
+    display: flex;
+    height: 80%;
+    align-items: center;
+}
+
+footer .inner .logo {
+    font-size: 2rem;
+    margin-right: 30px;
+}
+
+
+footer .inner ul.list li {
+    float: left;
+    padding: 0 10px;
+    line-height: 1;
+    margin-bottom: 10px;
+    border-right: 1px solid #999;
+}
+
+footer .inner ul.list li:nth-child(2n),footer .inner ul.list li:last-child {
+    border-right: 0;
+}
+
+footer .inner ul.list li:nth-child(2n+1) {
+    clear: both;
+}
+
+footer .inner ul.sns {
+    margin-left: auto;
+    display: flex;
+    font-size: 1.4rem;
+    gap: 20px;
+}
+
+footer .bottom {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid #999;
+    font-size: .8rem;
+}

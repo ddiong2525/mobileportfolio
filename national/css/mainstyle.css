@@ -1,0 +1,1249 @@
+@charset "utf-8";
+
+.main_visual {
+    width: 100%;
+    height: clamp(253px, 74vw, 878px);
+    position: relative;
+    overflow: hidden;
+}
+
+.main_visual .left,
+.main_visual .top,
+.main_visual .right,
+.main_visual .bottom {
+    position: absolute;
+    background: var(--main-yellow-color);
+    /* transform: scaleX(0); */
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+
+/* 위치 지정 */
+.main_visual .left {
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 0;
+}
+
+.main_visual .top {
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+}
+
+.main_visual .right {
+    bottom: 0;
+    right: 0;
+    width: 1px;
+    height: 0;
+}
+
+.main_visual .bottom {
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    width: 0;
+}
+
+/* hover 시 순차적으로 등장 */
+.main_visual:hover .left {
+    transition-delay: 0s;
+    height: 80%;
+}
+
+.main_visual:hover .top {
+    transition-delay: 0.05s;
+    width: 80%;
+}
+
+.main_visual:hover .right {
+    transition-delay: 0.1s;
+    height: 80%;
+}
+
+.main_visual:hover .bottom {
+    transition-delay: 0.15s;
+    width: 80%;
+}
+
+.main_visual ul {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.main_visual ul li.slide1 {
+    background: url(../img/slide1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.main_visual ul li.slide2 {
+    background: url(../img/slide2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.main_visual ul li.slide3 {
+    background: url(../img/slide3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.main_visual ul li.slide4 {
+    background: url(../img/slide4.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.main_visual ul li.slide5 {
+    background: url(../img/slide5.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.main_visual ul li {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2.5vw, 30px);
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    padding-left: clamp(40px, 13vw, 236px);
+}
+
+.main_visual ul li .button {
+    width: clamp(137px, 15vw, 195px);
+    height: clamp(32px, 4vw, 49px);
+    border: 1px solid var(--main-yellow-color);
+    display: flex;
+
+}
+
+.main_visual ul li .button>a {
+    display: flex;
+    color: var(--main-yellow-color);
+    font-size: clamp(16px, 2.1vw, 24px);
+    gap: 20px;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    font-family: var(--Notosans);
+}
+
+.main_visual ul li .contents {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: clamp(30px, 6.3vw, 130px);
+    color: #f5f4e1;
+}
+
+.main_visual ul li .contents>.tit {
+    display: inline-flex;
+    flex-direction: column;
+    padding: 15px 0px;
+    justify-content: center;
+    gap: clamp(12px, 1.7vw, 20px);
+    border-top: 2px solid var(--main-yellow-color);
+    border-bottom: 2px solid var(--main-yellow-color);
+    font-family: var(--Notosans);
+    font-size: clamp(32px, 6.7vw, 72px);
+}
+
+.main_visual ul li .contents>.tit>p {
+    font-weight: 200;
+}
+
+.main_visual ul li .contents>.tit>span {
+    font-weight: 500;
+}
+
+.main_visual ul li .contents i {
+    font-size: clamp(14px, 1.4vw, 18px);
+    line-height: clamp(22px, 2.1vw, 28px);
+    font-weight: 400;
+}
+
+/* 불릿 디자인 변경 */
+.main_visual .swiper-horizontal>.swiper-pagination-bullets,
+.main_visual .swiper-pagination-bullets.swiper-pagination-horizontal,
+.main_visual .swiper-pagination-custom,
+.main_visual .swiper-pagination-fraction {
+    bottom: var(--swiper-pagination-bottom, 38px);
+    /* 마진바텀값 */
+}
+
+.main_visual .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
+    /* 동그라미 사이사이의 너비 */
+}
+
+.main_visual .swiper-pagination-bullet {
+    width: var(--swiper-pagination-bullet-width, var(--swiper-pagination-bullet-size, 7px));
+    height: var(--swiper-pagination-bullet-height, var(--swiper-pagination-bullet-size, 7px));
+    background: var(--main-font-color);
+    opacity: .5;
+    /* 불릿 사이즈의 색상과 서클 사이즈! 오퍼시티를 없애고 싶어도 1로 설정해야지 아예 지우면 서버에 설정된 오퍼시티 값이 그대로 결정된다 */
+}
+
+.main_visual .swiper-pagination-bullet-active {
+    opacity: .8;
+    background: var(--main-yellow-color);
+    /* active 상태에서의 색상 */
+}
+
+/* autoplay */
+.main_visual .autoplay-progress {
+    position: absolute;
+    right: 50px;
+    top: 33px;
+    z-index: 10;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--swiper-theme-color);
+}
+
+.main_visual .autoplay-progress svg {
+    --progress: 0;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    stroke-width: 2px;
+    stroke: var(--main-yellow-color);
+    fill: none;
+    stroke-dashoffset: calc(125.6px * (1 - var(--progress)));
+    stroke-dasharray: 125.6;
+    transform: rotate(-90deg);
+}
+
+/* national */
+.national .inner {
+    padding: clamp(40px, 13vw, 180px) 0;
+}
+
+.national .inner .contents {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 20px);
+}
+
+.national .inner .contents .top {
+    width: 100%;
+    height: clamp(169px, 53.1vw, 563px);
+    background: url(../img/national_main.jpg) center center no-repeat;
+}
+
+.national .inner .contents .top a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: clamp(20px, 6.5vw, 111px);
+    padding-left: clamp(15px, 5vw, 100px);
+}
+
+.national .inner .contents .top p {
+    font-size: clamp(20px, 6vw, 60px);
+    color: rgba(255, 255, 255, 0.80);
+    font-family: var(--Notosans);
+    font-weight: 300;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.national .inner .contents .top p span {
+    font-size: clamp(30px, 7vw, 70px);
+    color: rgba(255, 255, 255, 0.80);
+    font-family: var(--Notosans);
+    font-weight: 400;
+}
+
+.national .inner .contents .bottom {
+    width: 100%;
+    height: auto;
+}
+
+.thumb.one {
+    background: url(../img/sub1.png) center center no-repeat;
+    background-size: cover;
+}
+
+.thumb.two {
+    background: url(../img/sub2.png) center center no-repeat;
+    background-size: cover;
+}
+
+.thumb.three {
+    background: url(../img/sub3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.thumb p {
+    display: none;
+    gap: 3px;
+    flex-direction: column;
+    font-size: clamp(20px, 6vw, 60px);
+    color: rgba(255, 255, 255, 0.80);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.36);
+    font-family: var(--Notosans);
+    font-weight: 300;
+}
+
+.thumb span {
+    font-size: clamp(30px, 7vw, 70px);
+    color: rgba(255, 255, 255, 0.80);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.36);
+    font-family: var(--Notosans);
+    font-weight: 400;
+}
+
+.national .inner .contents .bottom ul.imgs {
+    width: 100%;
+    display: flex;
+    gap: clamp(16px, 2vw, 20px);
+}
+
+.national .inner .contents .bottom ul.imgs li {
+    flex: 1;
+    height: auto;
+}
+
+.national .inner .contents .bottom ul.imgs li a {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.thumb {
+    width: 100%;
+    height: clamp(169px, 25vw, 250px);
+    padding-bottom: clamp(20px, 6.5vw, 111px);
+    padding-left: clamp(15px, 5vw, 100px);
+    display: flex;
+    align-items: flex-end;
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(1) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(1) a:hover:after {
+    transform: scale(1);
+}
+
+
+.national .inner .contents .bottom ul.imgs li:nth-child(2) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(2) a:hover:after {
+    transform: scale(1);
+    animation: hoverAni .5s;
+}
+
+@keyframes hoverAni {
+    0% {
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0.4;
+    }
+
+    80% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(3) a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    left: -10px;
+    top: -10px;
+    transition: .6s;
+    transform: scale(0);
+}
+
+.national .inner .contents .bottom ul.imgs li:nth-child(3) a:hover:after {
+    transform: scale(1);
+}
+
+/* magazine */
+.magazine {
+    background: url(../img/magazines_tit.jpg) center center no-repeat;
+    width: 100%;
+    height: 477px;
+    font-family: var(--Adamina);
+    color: rgba(255, 255, 255, 0.92);
+    cursor: pointer;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-right: clamp(40px, 6.8vw, 224px);
+    padding-bottom: clamp(40px, 6.8vw, 98px);
+}
+
+.magazine .txt {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+}
+
+.magazine .txt span {
+    font-size: clamp(18px, 3.2vw, 39px);
+}
+
+.magazine .txt p {
+    font-size: clamp(32px, 7vw, 85px);
+}
+
+/* vid_gal */
+.vid_gal {
+    display: flex;
+    padding: clamp(40px, 13vw, 180px) 0;
+    gap: clamp(30px, 7vw, 70px);
+}
+
+.vid_gal section {
+    width: 50%;
+}
+
+.vid_gal .video ul {
+    width: 100%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    /* 두 개씩 내리려면 어띃게 하는지요.,.-> width값을 바꿔라 */
+}
+
+.vid_gal .video ul li {
+    width: 48%;
+    height: clamp(200px, 34.5vw, 345px);
+    background: #ccc;
+    font-size: clamp(25px, 4vw, 40px);
+    font-weight: 400;
+    color: #EFEFEF;
+}
+
+.vid_gal .video ul li a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.vid_gal .video ul li a .tit {
+    width: 100%;
+    height: 100px;
+    padding-left: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.vid_gal .video ul li a .tit .txt {
+    gap: clamp(10px, 1.6vw, 16px);
+    position: absolute;
+    z-index: 150;
+    display: flex;
+    left: 20px;
+    align-items: center;
+}
+
+.vid_gal .video ul li a .tit .txt span {
+    font-size: clamp(25px, 4vw, 40px);
+}
+
+.vid_gal .video ul li a .tit .bg::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(0deg, rgba(255, 219, 0, 0.53) 0%, rgba(255, 219, 0, 0.00) 100%);
+    opacity: 0;
+    left: 0;
+    bottom: -100px;
+    transition: .4s;
+}
+
+.vid_gal .video ul li:hover a .tit .bg::after {
+    bottom: 0;
+    opacity: 1;
+    /* 밑에서 위로 스르륵 올라오게 하려면 어떻게 하ㄴㅏ요? -> 애프터를 주고 bottom값을 바꿔라~*/
+}
+
+.vid_gal .video ul li:nth-child(3) a .tit {
+    border-radius: 0px 0px 0px 20px;
+}
+
+.vid_gal .video ul li:nth-child(4) a .tit {
+    border-radius: 0px 0px 20px 0px;
+}
+
+.vid_gal .video ul li:nth-child(1) {
+    background: url(../img/video1.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 20px 0px 0px 0px;
+}
+
+.vid_gal .video ul li:nth-child(2) {
+    background: url(../img/video2.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 0px 20px 0px 0px;
+}
+
+.vid_gal .video ul li:nth-child(3) {
+    background: url(../img/video3.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 0px 20px;
+}
+
+.vid_gal .video ul li:nth-child(4) {
+    background: url(../img/video4.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 0px 0px 20px 0px;
+}
+
+.gal .swiper {
+    margin-top: 20px;
+    width: clamp(300px, 42.2vw, 422px);
+    height: calc(clamp(300px, 42.2vw, 422px) * 1.492);
+}
+
+.gal .swiper .swiper-slide {
+    border-radius: 20px;
+    background-color: var(--main-yellow-color);
+}
+
+.gal .swiper .swiper-slide-active:nth-child(1n) {
+    background: url(../img/gallery1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.gal .swiper .swiper-slide-active:nth-child(2n) {
+    background: url(../img/gallery2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.gal .swiper .swiper-slide-active:nth-child(3n) {
+    background: url(../img/gallery4.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.gal .swiper .swiper-slide-active:nth-child(4n) {
+    background: url(../img/gallery3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.gal .swiper .swiper-slide-active:nth-child(5n) {
+    background: url(../img/gallery5.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.gal .swiper .swiper-slide a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 6px;
+    padding-left: 29px;
+    padding-bottom: 80px;
+    color: rgba(255, 255, 255, 0.96);
+    text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.24);
+}
+
+.gal .swiper .swiper-slide a p {
+    font-size: clamp(24px, 4.8vw, 48px);
+    font-weight: 300;
+}
+
+.gal .swiper .swiper-slide a span {
+    font-size: clamp(30px, 6vw, 60px);
+    font-weight: 400;
+}
+
+.gal .swiper .swiper-slide:nth-child(2) a p {
+    font-size: clamp(18px, 3.2vw, 32px);
+}
+
+.gal .swiper .swiper-slide:nth-child(3) a p {
+    font-size: clamp(28px, 5.5vw, 55px);
+    font-weight: 400;
+}
+
+.gal .swiper .swiper-slide:nth-child(3) a span {
+    font-size: clamp(18px, 3.2vw, 32px);
+    font-weight: 300;
+}
+
+.gal .swiper .swiper-slide:nth-child(5) a span {
+    font-size: clamp(25px, 5vw, 50px);
+}
+
+
+/* travel */
+.travel .tit h2 {
+    color: rgba(255, 255, 255, 0.80);
+}
+
+.travel {
+    background: url(../img/mazine_travel_bgimg.jpg) center center no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: clamp(40px, 13vw, 180px) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.travel .contents {
+    display: flex;
+    gap: 22px;
+}
+
+.travel .contents .left {
+    flex: 2;
+}
+
+.travel .left ul {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.travel .left ul li {
+    width: 49%;
+    height: clamp(418px, 34.3vw, 494px);
+    position: relative;
+}
+
+.travel .left ul li a .hover p {
+    position: absolute;
+    left: 20px;
+    bottom: 29px;
+}
+
+.travel .left ul li:nth-child(2) {
+    background: url(../img/travel2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.travel .left ul li:nth-child(3) {
+    background: url(../img/travel3.png) center center no-repeat;
+    background-size: cover;
+}
+
+.travel .left ul li:first-child {
+    width: 100%;
+    height: clamp(380px, 32vw, 456px);
+    background: url(../img/travel1.png) center center no-repeat;
+    background-size: cover;
+    margin-bottom: clamp(16px, 2vw, 20px);
+    /* 갭효과를 주다 */
+}
+
+.travel .left ul li a .hover {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    font-size: clamp(24px, 2.4vw, 43px);
+    color: #F2F2F2;
+    font-weight: 400;
+    transition: .6s;
+    line-height: 111%;
+    opacity: 0;
+    transition: .6s;
+}
+
+.travel .left ul li:first-child a .hover p {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.travel .left ul li:hover a .hover {
+    opacity: 1;
+}
+
+.travel .contents .right {
+    flex: 1;
+    /* height: 937px; */
+    background: rgba(0, 0, 0, 0.43);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.travel .contents .right .tit2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: clamp(6px, 1vw, 10px);
+    height: clamp(120px, 12vw, 157px);
+    position: relative;
+    z-index: 2;
+}
+
+.travel .contents .right h3 {
+    font-family: var(--Scdream);
+    font-weight: 500;
+    font-size: clamp(23px, 2.4vw, 37px);
+    color: #FCFCFC;
+}
+
+.travel .contents .right .more2 a {
+    color: #FCFCFC;
+    display: flex;
+    align-items: center;
+    font-size: clamp(16px, 2.4vw, 24px);
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    width: 100%;
+    height: 100%;
+    gap: clamp(6px, 1vw, 10px);
+}
+
+.travel .contents .right .more2 a span {
+    font-size: clamp(16px, 2.4vw, 24px);
+}
+
+.travel .contents .right ul {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: clamp(16px, 2vw, 24px);
+    padding: 0 10px;
+}
+
+.travel .contents .right ul li {
+    width: 100%;
+    height: 160px;
+}
+
+.travel .contents .right ul li a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    gap: clamp(16px, 4vw, 25px);
+    padding-right: 5px;
+}
+
+.travel .contents .right ul li a:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid var(--main-yellow-color);
+    opacity: 0;
+    transition: .3s;
+}
+
+.travel .contents .right ul li:hover a:after {
+    opacity: 1;
+}
+
+.travel .contents .right ul li a .txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: clamp(5px, 1.5vw, 10px);
+    color: #fdfdfd;
+}
+
+.travel .contents .right ul li a .txt span {
+    font-size: clamp(12px, 1.8vw, 20px);
+    font-family: var(--Pretendard);
+}
+
+.travel .contents .right ul li a .txt p {
+    font-size: clamp(16px, 1.8vw, 23px);
+    font-weight: 400;
+    line-height: normal;
+}
+
+
+
+/* kids */
+.kids {
+    padding: clamp(40px, 13vw, 180px) 0;
+}
+
+.kids .tit .more a {
+    font-family: var(--Noonnu);
+}
+
+.kids .contents {
+    display: flex;
+    gap: clamp(12px, 2.5vw, 22px);
+    color: var(--main-gray-color);
+    font-family: var(--Noonnu);
+}
+
+.kids .contents .left {
+    flex: 1;
+}
+
+.kids .contents .left a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    gap: clamp(12px, 2vw, 24px);
+}
+
+.kids .contents .left a .img {
+    width: 100%;
+    height: clamp(150px, 25vw, 337px);
+    background: url(../img/kids1.jpg) center center no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 18px;
+    gap: 3px;
+}
+
+.kids .contents .left a .img .txt {
+    display: none;
+}
+
+.kids .contents .left a:after {
+    content: '';
+    border-bottom: 2px solid var(--main-yellow-color);
+    border-left: 2px solid var(--main-yellow-color);
+    width: 0px;
+    height: 0px;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .left:hover a:after {
+    width: 40%;
+    height: 30%;
+}
+
+.kids .contents .left a:before {
+    content: '';
+    border-top: 2px solid var(--main-yellow-color);
+    border-right: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .left:hover a:before {
+    width: 40%;
+    height: 30%;
+}
+
+.kids .contents .left a .txt {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(8px, 2vw, 14px);
+    padding-left: clamp(12px, 1.5vw, 25px);
+}
+
+.kids .contents .yellow {
+    width: clamp(61px, 10vw, 133px);
+    height: clamp(22px, 4vw, 46px);
+    background: var(--main-yellow-color);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--GT);
+    font-weight: 500;
+    letter-spacing: 2px;
+    color: var(--w-color);
+    font-size: clamp(13px, 2.2vw, 25px);
+    text-shadow: 0px 2px 4px #DFC000;
+}
+
+.kids .contents p {
+    font-size: clamp(18px, 2.5vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.54px;
+}
+
+.kids .contents .right {
+    flex: 1;
+}
+
+.kids .contents .right ul {
+    width: 100%;
+    ;
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.kids .contents .right ul li {
+    width: 48%;
+}
+
+.kids .contents .right ul li a {
+    width: 100%;
+    height: clamp(150px, 20vw, 235px);
+    display: flex;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vw, 25px);
+    align-items: center;
+    position: relative;
+}
+
+.kids .contents a .img .txt {
+    display: none;
+    color: var(--w-color);
+    padding-left: 0;
+}
+
+.kids .contents .right ul li a .img {
+    width: 100%;
+    height: clamp(100px, 16vw, 165px);
+    border-radius: 20px;
+    padding: 18px;
+}
+
+.kids .contents .right ul li:nth-child(1) a .img {
+    background: url(../img/kid2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.kids .contents .right ul li:nth-child(2) a .img {
+    background: url(../img/kids3.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.kids .contents .right ul li:nth-child(3) a .img {
+    background: url(../img/kids4.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.kids .contents .right ul li:nth-child(4) a .img {
+    background: url(../img/kids5.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.kids .contents .right ul li a>p {
+    font-size: clamp(14px, 2vw, 20px);
+}
+
+.kids .contents .right ul li a:after {
+    content: '';
+    border-top: 2px solid var(--main-yellow-color);
+    border-left: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 11px;
+    left: 11px;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .right ul li:hover a:after {
+    width: 126px;
+    height: 47px;
+}
+
+.kids .contents .right ul li a:before {
+    content: '';
+    border-bottom: 2px solid var(--main-yellow-color);
+    border-right: 2px solid var(--main-yellow-color);
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    transition: .3s;
+    z-index: 100;
+}
+
+.kids .contents .right ul li:hover a:before {
+    width: 126px;
+    height: 47px;
+}
+
+/* store */
+.store {
+    padding: clamp(40px, 13vw, 180px) 0;
+}
+
+.store .swiper {
+    padding: 60px 0;
+    /* 이게 있어야 입체감이 좀 있음 */
+    position: relative;
+}
+
+.store .swiper-slide {
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    filter: grayscale(50%);
+    position: relative;
+    overflow: visible;
+}
+
+.store .swiper-slide-next {
+    position: relative;
+    z-index: 9;
+}
+
+.store .swiper-slide img {
+    width: clamp(335px, 58vw, 700px);
+    transition: transform 0.3s ease;
+}
+
+.store .swiper-slide-active {
+    filter: grayscale(0%);
+    z-index: 10;
+    /*     position: relative; */
+    transition: 0.6s;
+}
+
+.store .swiper-slide-active a {
+    width: clamp(335px, 70vw, 840px);
+    height: auto;
+    position: relative;
+}
+
+.store .swiper-slide-active img {
+    transform: scale(1.2);
+}
+
+.store .swiper .swiper-slide .txt {
+    position: absolute;
+    left: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.store .swiper .swiper-slide-active a .txt {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.store .txt ul {
+    display: flex;
+    font-family: 'Namsanm';
+    color: var(--w-color);
+    font-size: clamp(20px, 2.7vw, 27px);
+    gap: clamp(8px, 1vw, 10px);
+}
+
+.store .txt ul li {
+    padding-right: clamp(6px, 1vw, 10px);
+    border-right: 2px solid var(--main-yellow-color);
+}
+
+.store a .txt ul li:last-child {
+    border-right: 0;
+}
+
+.store .txt h3 {
+    font-size: clamp(30px, 4.2vw, 48px);
+    color: var(--w-color);
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+    font-family: var(--Pretendard);
+    font-weight: 700;
+}
+
+.store .swiper-slide-active .txt h3 {
+    font-size: clamp(36px, 5vw, 56px);
+    color: var(--w-color);
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+    font-weight: 700;
+    padding-top: clamp(6px, 1vw, 10px);
+    padding-bottom: clamp(4px, 1vw, 8px);
+}
+
+.store .txt h4 {
+    font-size: clamp(20px, 2.2vw, 25px);
+    color: var(--w-color);
+    margin-top: clamp(6px, 1vw, 10px);
+    font-weight: 300;
+    text-shadow: 0px 4px 5px rgba(57, 37, 110, 0.35);
+}
+
+.store .txt h4 span {
+    color: var(--main-yellow-color);
+}
+
+.store .txt p {
+    font-family: var(--Pretendard);
+    font-weight: 400;
+    margin-top: 7px;
+    font-size: clamp(16px, 1.5vw, 18px);
+}
+
+.store .swiper-slide-active a:after {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: clamp(335px, 70vw, 840px);
+    height: 480px;
+    position: absolute;
+    left: -60px;
+    top: -28px;
+    transition: .3s;
+    z-index: 100;
+    transform: scale(0);
+    transition-delay: 0.1s;
+}
+
+.store .swiper-slide-active a:before {
+    content: '';
+    border: 2px solid var(--main-yellow-color);
+    width: clamp(335px, 70vw, 840px);
+    height: clamp(190px, 40vw, 480px);
+    position: absolute;
+    right: -60px;
+    top: -50px;
+    transition: .3s;
+    z-index: 100;
+    transform: scale(0);
+    transition-delay: 0.1s;
+}
+
+.store .swiper-slide-active a:hover:after {
+    transform: scale(1);
+}
+
+.store .swiper-slide-active a:hover:before {
+    transform: scale(1);
+
+}
+
+.store_next img {
+    width: clamp(45px, 6vw, 70px);
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    right: 10vw;
+    top: 40%;
+    z-index: 100;
+}
+
+.store_prev img {
+    width: clamp(45px, 6vw, 70px);
+    cursor: pointer;
+    position: absolute;
+    display: none;
+    left: 10vw;
+    top: 40%;
+    z-index: 105;
+}
+
+.store_595 {
+    display: none;
+    flex-direction: column;
+    gap: clamp(12px, 2.5vw, 22px);
+}
+
+.store_595>div {
+    height: clamp(169px, 53.1vw, 563px);
+    width: 100%;
+}
+
+.store_595>div>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.store_595>div>a .txt {
+    display: flex;
+    flex-direction: column;
+    gap: clamp(2px, 1vw, 6px);
+    padding-left: clamp(10px, 4vw, 20px);
+    padding-bottom: clamp(25px, 8vw, 45px);
+    justify-content: flex-end;
+}
+
+.apparel {
+    background: url(../img/store1.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.action {
+    background: url(../img/store2.jpg) center center no-repeat;
+    background-size: cover;
+}
+
+.mobile {
+    background: url(../img/store3.jpg) center center no-repeat;
+    background-size: cover;
+}
