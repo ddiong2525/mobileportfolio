@@ -190,6 +190,7 @@
     .vid_gal {
         flex-direction: column;
         gap: clamp(150px, 17.2vw, 180px);
+        overflow: hidden;
     }
 
     .vid_gal section {
